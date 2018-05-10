@@ -6,15 +6,10 @@
 <h1>Bug Tracker</h1>
 <hr>
 <section class="stats">
-<<<<<<< HEAD
   Bug Count (Closed / Total) :
   <span class="closed">{{closedBug}}</span>
   <span> / </span>
   <span>{{bugList.length}}</span>
-=======
-    Closed Bug :<span class="closed">{{closedBug}}</span>
-    <span> / </span> Total Bug :<span>{{bugList.length}}</span>
->>>>>>> 738a53a6deac038b851d1bc5cfa0a1a2fc5e99aa
 </section>
 <section class="sort">
   <label for="">Order By :</label>
@@ -27,18 +22,6 @@
 </section>
 <app-bug-edit (bugCreated)="onNewBugCreated($event)"></app-bug-edit>
 <section class="list">
-<<<<<<< HEAD
-  <ol>
-    <li *ngFor="let bug of ( bugList | sort:bugSortBy:bugSortDescendingOrder )" class="bug">
-      <span class="bugname" (click)='toggleBug(bug)' [ngClass]="{'closed': bug.isClosed}">{{bug.name | trimText: 25}}</span>
-      <br>
-      <div class="datetime">Created at : {{bug.createdTime}}</div>
-      <button (click)="showBugDetails($event,bug)" class="show-details-btn">Show Details</button>
-    </li>
-  </ol>
-  <input type="button" value="Remove Closed" (click)="removeClosedBugs()">
-</section>
-=======
     <ol>
         <li *ngFor="let bug of ( bugList | sort:bugSortBy:bugSortDescendingOrder )" class="bug">
             <span class="bugname" (click)='toggleBug(bug)' [ngClass]="{'closed': bug.isClosed}">{{bug.name | trimText: 25}}</span><br>
@@ -48,4 +31,3 @@
     </ol>
     <input type="button" class="remove-closed-btn" value="Remove Closed" (click)="removeClosedBugs()">
 </section>
->>>>>>> 738a53a6deac038b851d1bc5cfa0a1a2fc5e99aa
