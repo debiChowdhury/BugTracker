@@ -16,7 +16,6 @@ section {
 .closed {
     color: red;
     text-decoration: line-through;
-    
     font-weight: bold;
 }
 
@@ -31,10 +30,9 @@ ol {
 }
 
 li {
-    border: 1px solid gray;
-    border-radius: 5px;
+    border-radius: 3px;
     margin-bottom: 10px;
-    background-color: #e7e7e7;
+    background-color: #cbefed;
     padding: 5px;
 }
 
@@ -62,9 +60,10 @@ li {
     border: 0;
     outline: 0;
     margin-left: 3rem;
-    box-shadow: 2px 5px 8px 0px #4c4b4bad;
+    box-shadow: 2px 5px 8px 0px rgba(76, 75, 75, 0.6784313725490196);
     height: 3rem;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .add-new-btn:active {

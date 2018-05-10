@@ -18,7 +18,10 @@ export class BugtrackerComponent implements OnInit {
   storedBugs;
   bugSortBy = 'name';
   bugSortDescendingOrder = false;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 738a53a6deac038b851d1bc5cfa0a1a2fc5e99aa
   constructor(private router: Router) { }
 
   ngOnInit() {
