@@ -10,6 +10,8 @@ export class BugDetailsComponent implements OnInit {
   bugId;
   bugDetails;
   bugName;
+  createdTime;
+  stat;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -18,8 +20,10 @@ export class BugDetailsComponent implements OnInit {
     this.bugDetails.forEach(bug => {
       if (bug.id === this.bugId) {
         this.bugName = bug.name;
+        this.createdTime = bug.createdTime;
+        this.stat = bug.isClosed;
       }
-    })
+    });
   }
 
 }
