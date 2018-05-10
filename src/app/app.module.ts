@@ -20,7 +20,6 @@ import { BugtrackerComponent } from './bugtracker/bugtracker.component';
     BugEditComponent,
     BugDetailsComponent,
     BugtrackerComponent
-    
   ],
   imports: [
     BrowserModule,
@@ -29,7 +28,7 @@ import { BugtrackerComponent } from './bugtracker/bugtracker.component';
     RouterModule.forRoot([{
       'path': '', component: BugtrackerComponent
     }, {
-      'path':':id',component:BugDetailsComponent  
+      'path': ':id', component: BugDetailsComponent
     }])
   ],
   providers: [],

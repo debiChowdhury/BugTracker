@@ -6,8 +6,7 @@
 <hr>
 <section class="stats">
     Closed Bug :<span class="closed">{{closedBug}}</span>
-    <span> / </span>
-    Total Bug :<span>{{bugList.length}}</span>
+    <span> / </span> Total Bug :<span>{{bugList.length}}</span>
 </section>
 <section class="sort">
     <label for="">Order By :</label>
@@ -27,5 +26,5 @@
             <button (click)="showBugDetails($event,bug)" class="show-details-btn">Show Details</button>
         </li>
     </ol>
-    <input type="button" value="Remove Closed" (click)="removeClosedBugs()">
+    <input type="button" class="remove-closed-btn" value="Remove Closed" (click)="removeClosedBugs()">
 </section>

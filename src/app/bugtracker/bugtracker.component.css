@@ -4,9 +4,30 @@
     right: 0;
     height: 3.45rem;
     border-radius: 5px;
+    background-color: rgba(234, 138, 116, 0.729411);
+    cursor: pointer;
+}
+
+.show-details-btn:active {
+    background-color: rgb(236, 115, 87);
+    outline: 0;
 }
 
 .bug {
     position: relative;
 }
 
+.remove-closed-btn {
+    background-color: #ea8a74;
+    border: 0;
+    outline: 0;
+    margin-left: 3rem;
+    box-shadow: 2px 5px 8px 0px rgba(76, 75, 75, 0.6784313725490196);
+    height: 3rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-closed-btn:active {
+    background-color: #e27056;
+}

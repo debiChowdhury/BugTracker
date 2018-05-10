@@ -16,6 +16,8 @@ export class BugtrackerComponent implements OnInit {
   closedBug = 0;
   closed = 0;
   storedBugs;
+  bugSortBy = 'name';
+  bugSortDescendingOrder = false;
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -24,17 +26,12 @@ export class BugtrackerComponent implements OnInit {
       this.bugList = this.storedBugs;
     }
   }
-  
-
-  bugSortBy: string = 'name';
-  bugSortDescendingOrder: boolean = false;
 
   onNewBugCreated(value) {
     if (value.name) {
       this.bugList.push(value);
       localStorage.setItem('bugList', JSON.stringify(this.bugList));
     }
-   
   }
 
   toggleBug(value) {
@@ -47,7 +44,6 @@ export class BugtrackerComponent implements OnInit {
   removeClosedBugs() {
     this.bugList = this.bugList.filter(bug => !bug.isClosed);
     this.closedBug = 0;
-    
     localStorage.setItem('bugList', JSON.stringify(this.bugList));
   }
   showBugDetails(event, bug) {
