@@ -1,6 +1,7 @@
 export interface Bug{
     name: string,
     isClosed: boolean,
-    createdAt:any
+    createdAt: any
+    id:any
 
 }

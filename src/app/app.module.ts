@@ -6,6 +6,9 @@ import { SortPipe } from './pipes/sort-pipes';
 import { AppComponent } from './app.component';
 import { BugEditComponent } from './bug-edit.component';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
+import { BugDetailsComponent } from './bug-details/bug-details.component';
+import { BugtrackerComponent } from './bugtracker/bugtracker.component';
 
 
 
@@ -14,13 +17,20 @@ import { HttpModule } from '@angular/http';
     AppComponent,
     TrimTextPipe,
     SortPipe,
-    BugEditComponent
+    BugEditComponent,
+    BugDetailsComponent,
+    BugtrackerComponent
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot([{
+      'path': '', component: BugtrackerComponent
+    }, {
+      'path':':id',component:BugDetailsComponent  
+    }])
   ],
   providers: [],
   bootstrap: [AppComponent]

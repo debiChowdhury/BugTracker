@@ -1,0 +1,12 @@
+.show-details-btn {
+    top: 0;
+    position: absolute;
+    right: 0;
+    height: 3.45rem;
+    border-radius: 5px;
+}
+
+.bug {
+    position: relative;
+}
+

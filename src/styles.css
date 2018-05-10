@@ -16,7 +16,7 @@ section {
 .closed {
     color: red;
     text-decoration: line-through;
-    font-style: italic;
+    
     font-weight: bold;
 }
 
@@ -36,4 +36,37 @@ li {
     margin-bottom: 10px;
     background-color: #e7e7e7;
     padding: 5px;
+}
+
+.datetime {
+    display: inline-block;
+}
+
+.bug-name-input {
+    width: 30.5%;
+    font-size: 18px;
+    margin-left: 2rem;
+    border: none;
+    border-bottom: 3px solid #9fcecc;
+}
+
+.bug-name-input:focus {
+    outline: 0;
+    border-bottom: 3px solid #20847f;
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+}
+
+.add-new-btn {
+    background-color: #ea8a74;
+    border: 0;
+    outline: 0;
+    margin-left: 3rem;
+    box-shadow: 2px 5px 8px 0px #4c4b4bad;
+    height: 3rem;
+    border-radius: 5px;
+}
+
+.add-new-btn:active {
+    background-color: #e27056;
 }
