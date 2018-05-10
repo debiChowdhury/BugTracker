@@ -15,6 +15,7 @@ export class BugEditComponent {
     bugCreated: EventEmitter<any> = new EventEmitter();
     bugName: string;
     bugId = 0;
+    showRemoveBtn = false;
 
     onKeydown(val) {
         if (val.keyCode === 13) {

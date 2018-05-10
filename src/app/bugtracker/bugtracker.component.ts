@@ -1,7 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 import * as moment from 'moment';
-import { Router } from '@angular/router';
-import { BugDetailsComponent } from '../bug-details/bug-details.component';
+import {
+  Router
+} from '@angular/router';
+import {
+  BugDetailsComponent
+} from '../bug-details/bug-details.component';
 
 @Component({
   selector: 'app-bugtracker',
@@ -18,8 +25,9 @@ export class BugtrackerComponent implements OnInit {
   storedBugs;
   bugSortBy = 'name';
   bugSortDescendingOrder = false;
+  hoveredBug;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.storedBugs = JSON.parse(localStorage.getItem('bugList'));
@@ -51,7 +59,23 @@ export class BugtrackerComponent implements OnInit {
     //  event.stopPropagation();
     //  event.preventDefault();
     console.log('clicking on  li', bug, event.target);
-    this.router.navigate(['/details/', { id: bug.id }]);
+    this.router.navigate(['/details/', {
+      id: bug.id
+    }]);
+  }
+  showButton(bug) {
+    this.hoveredBug = bug;
+    this.hoveredBug.showBtn = true;
+  }
 
+  hideButton() {
+    // this.hoveredBug = bug;
+    this.hoveredBug.showBtn = false;
+  }
+
+  removeBug(bug) {
+    const index = this.bugList.indexOf(bug);
+    this.bugList.splice(index, 1);
+    localStorage.setItem('bugList', JSON.stringify(this.bugList));
   }
 }
